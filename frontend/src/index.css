@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --va-primary: #1e40af;
+    --va-primary-dark: #1e3a8a;
+    --va-primary-light: #3b82f6;
+    --va-navy: #0a2540;
+    --va-navy-dark: #07192d;
+    --va-accent: #2563eb;
+    --va-bg: #f8fafc;
+    --va-card: #ffffff;
+    --va-border: #e2e8f0;
+    --va-text-primary: #0f172a;
+    --va-text-secondary: #475569;
+    --va-success: #059669;
+    --va-warning: #d97706;
+    --va-danger: #dc2626;
+    --va-info: #0284c7;
+  }
+
+  body {
+    background-color: var(--va-bg);
+    color: var(--va-text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Institutional Clean Table Styles */
+.va-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.8125rem;
+}
+
+.va-table thead {
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.va-table th {
+  padding: 0.625rem 0.875rem;
+  font-weight: 700;
+  text-align: left;
+  color: #334155;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.va-table td {
+  padding: 0.75rem 0.875rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+  vertical-align: middle;
+}
+
+.va-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.va-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Standard Inputs & Form Controls */
+.va-input {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8125rem;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.va-input:focus {
+  border-color: var(--va-primary-light);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Primary Action Buttons */
+.va-btn-primary {
+  background-color: #1e40af;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1e3a8a;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.va-btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 2px 4px 0 rgba(30, 64, 175, 0.2);
+}
+
+.va-btn-secondary {
+  background-color: #ffffff;
+  color: #334155;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.va-btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+/* Clean Card Styles */
+.va-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Status Badges */
+.va-badge-present {
+  background-color: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.va-badge-absent {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.va-badge-od {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.va-badge-ml {
+  background-color: #ffedd5;
+  color: #c2410c;
+  border: 1px solid #fed7aa;
+}
+
+.va-badge-review {
+  background-color: #fef9c3;
+  color: #a16207;
+  border: 1px solid #fef08a;
+}
+
+/* Hide scrollbars for clean responsive tabs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
